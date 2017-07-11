@@ -1,31 +1,35 @@
+
+<!-- 首页 -->
+
 <template>
   <div class="index">
     <div class="container">
 
       <!-- 开始游戏按钮 s -->
-      <button class="start-game"></button>
+      <a class="start-game" href="#/register"></a>
       <!-- 开始游戏按钮 e -->
 
       <!-- 排行榜按钮 s -->
-      <button class="ranking"></button>
+      <a class="ranking" href="#/ranking"></a>
       <!-- 排行榜按钮 e -->
 
       <!-- 下面的按钮 s -->
       <div class="bottom">
 
         <!-- 活动商户按钮 s -->
-        <button class="merchant"></button>
+        <a class="merchant" href="#/merchant"></a>
         <!-- 活动商户按钮 e -->
 
-        <button class="rule">活动规则</button>
+        <!-- 活动规则按钮 s -->
+        <a class="rule" href="#/rule">活动规则</a>
+        <!-- 活动规则按钮 e -->
 
         <!-- 我的账户按钮 s -->
-        <button class="account"></button>
+        <a class="account" href="#/account" @click="playPressMusic()"></a>
         <!-- 我的账户按钮 e -->
 
       </div>
       <!-- 下面的按钮 e -->
-
     </div>
   </div>
 </template>
@@ -34,7 +38,7 @@
   .index {
     width: 100%;
     height: 100%;
-    background: url('../assets/bg-index.png') no-repeat;
+    background: url('../assets/bgIndex.png') no-repeat;
   }
 
   .index .container {
