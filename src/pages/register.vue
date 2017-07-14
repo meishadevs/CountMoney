@@ -14,7 +14,7 @@
     <!-- 注册信用卡账号按钮 e -->
 
     <!-- 输入错误产生的提示信息 s -->
-    <p class="error-info" v-if="isShowNotice">您输入的信用卡号后八位不正确，请重新输入！</p>
+    <p class="error-info" v-if="isShowNotice">{{ noticeContent }}</p>
     <!-- 输入错误产生的提示信息 e -->
 
     <p class="notice-content">
@@ -35,7 +35,10 @@
         cardNum: '',
 
         //标记是否显示信用卡号后8位输入错误时产生的提示信息
-        isShowNotice: false
+        isShowNotice: false,
+
+        //设置提示信息的内容
+        noticeContent: '您输入的信用卡号后八位不正确，请重新输入！'
       };
     },
 
@@ -46,19 +49,30 @@
 
           if (this.checkCardNum()) {
 
-               //将信用卡号保存在本地
-              localStorage.setItem('cardNum', this.cardNum);
-
               //使用axios发送post请求实现注册
               this.$http({
                 method: 'post',
-                url: 'http://localhost/zhsqServer/register.php',
+                url: this.registerUrl,
                 data: this.qs.stringify({cardnum: this.cardNum}),
                 headers: {
                   'Content-Type': 'application/x-www-form-urlencoded',
                 }
-              }).then(function(res){
-                console.log(res.data);
+              }).then(res => {
+                  if (res.data == 0) {
+                      this.noticeContent = '您输入的信用卡账号已经注册了！';
+                      this.isShowNotice = true;
+
+                  } else if (res.data == -1) {
+                      this.noticeContent = '注册失败！'
+                      this.isShowNotice = true;
+
+                  //注册成功进入游戏
+                  } else if (res.data == 1) {
+
+                    //将信用卡号保存在本地
+                    localStorage.setItem('cardNum', this.cardNum);
+                    window.location.href = '#/countMoney';
+                  }
               });
           }
       },
@@ -70,6 +84,7 @@
         if(this.cardNum.length < 8) {
 
           //显示信用卡号输入错误的提示信息
+          this.noticeContent = '您输入的信用卡号后八位不正确，请重新输入！';
           this.isShowNotice = true;
 
           return false;
@@ -79,6 +94,7 @@
         if(/[\u4E00-\u9FA5]/g.test(this.cardNum)) {
 
           //显示信用卡号输入错误的提示信息
+          this.noticeContent = '您输入的信用卡号后八位不正确，请重新输入！';
           this.isShowNotice = true;
 
           return false;
@@ -88,6 +104,7 @@
         if(!(/^\d+$/.test(this.cardNum)))
         {
           //显示信用卡号输入错误的提示信息
+          this.noticeContent = '您输入的信用卡号后八位不正确，请重新输入！';
           this.isShowNotice = true;
 
           return false;

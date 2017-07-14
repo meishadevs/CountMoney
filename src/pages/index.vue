@@ -6,7 +6,7 @@
     <div class="container">
 
       <!-- 开始游戏按钮 s -->
-      <a class="start-game" href="#/register"></a>
+      <a class="start-game" @click="startGame()"></a>
       <!-- 开始游戏按钮 e -->
 
       <!-- 排行榜按钮 s -->
@@ -25,7 +25,7 @@
         <!-- 活动规则按钮 e -->
 
         <!-- 我的账户按钮 s -->
-        <a class="account" href="#/account" @click="playPressMusic()"></a>
+        <a class="account" href="#/account"></a>
         <!-- 我的账户按钮 e -->
 
       </div>
@@ -33,6 +33,26 @@
     </div>
   </div>
 </template>
+
+
+<script>
+  module.exports = {
+      methods: {
+          startGame: function () {
+
+              // 获得存储在本地的信用卡账号
+              var cardNum = localStorage.getItem('cardNum');
+
+              if (cardNum != null) {
+                  window.location.href = '#/countMoney';
+              } else {
+                  window.location.href = '#/register';
+              }
+          }
+      }
+  };
+</script>
+
 
 <style scoped>
   .index {

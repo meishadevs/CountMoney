@@ -10,6 +10,10 @@ Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
 Vue.prototype.qs = qs;
 
+//注册的Url
+Vue.prototype.registerUrl = 'http://localhost/zhsqServer/register.php';
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

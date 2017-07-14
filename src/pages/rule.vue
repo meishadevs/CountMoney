@@ -7,6 +7,7 @@
   </div>
 </template>
 
+
 <style scoped>
   .rule {
     width: 100%;

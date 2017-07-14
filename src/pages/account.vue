@@ -7,6 +7,7 @@
   </div>
 </template>
 
+
 <style scoped>
   .account {
     width: 100%;
