@@ -8,10 +8,10 @@
 
       <!-- 滚动的图片 s -->
       <div>
-        <img src="../assets/caitiao.png" class="caitiao-top" v-bind:style="{top: caitiaoTop + 'px'}">
-        <img src="../assets/caitiao.png" class="caitiao-bottom" v-bind:style="{top: caitiaoBottom + 'px'}">
-        <img src="../assets/qian.png" class="qian-top" v-bind:style="{top: qianTop + 'px'}">
-        <img src="../assets/qian.png" class="qian-bottom" v-bind:style="{top: qianBottom + 'px'}">
+        <img src="../assets/caitiao.png" class="caitiao-top" v-bind:draggable="false" v-bind:style="{top: caitiaoTop + 'px'}">
+        <img src="../assets/caitiao.png" class="caitiao-bottom" v-bind:draggable="false" v-bind:style="{top: caitiaoBottom + 'px'}">
+        <img src="../assets/qian.png" class="qian-top" v-bind:draggable="false" v-bind:style="{top: qianTop + 'px'}">
+        <img src="../assets/qian.png" class="qian-bottom" v-bind:draggable="false" v-bind:style="{top: qianBottom + 'px'}">
       </div>
       <!-- 滚动的图片 -->
 
@@ -20,9 +20,9 @@
       <!-- 显示数钱张数的对话框 e -->
 
       <!-- 显示时间 s -->
-      <div class="showtime-dialog">
-        <img src="../assets/clock.png" alt="">
-        <span class="show-time">{{ numTime + ':00s' }}</span>
+      <div class="showtime-dialog" v-bind:draggable="false">
+        <img src="../assets/clock.png" v-bind:draggable="false">
+        <span class="show-time" v-bind:draggable="false">{{ numTime + ':00s' }}</span>
       </div>
       <!-- 显示时间 e -->
 
@@ -30,8 +30,8 @@
       <div class="hand"></div>
       <!-- 手 e -->
 
-      <div class="money">
-        <img src="../assets/money.png" class="money-img">
+      <div class="money" @mousemove="mouseDown($event)" @mouseup="mouseUp($event)">
+        <img src="../assets/money.png" class="money-img" v-bind:draggable="false">
       </div>
     </div>
   </div>
@@ -68,7 +68,16 @@
         scrTimer: null,
 
         //更新时间的定时器
-        updateTimer: null
+        updateTimer: null,
+
+        //标记不能数钱
+        isCanMove: false,
+
+        //按下鼠标时，鼠标的y坐标
+        startY: 0,
+
+        //松开鼠标时，鼠标的y坐标
+        endY: 0
       }
     },
 
@@ -120,6 +129,31 @@
             if (this.numTime == 0) {
                 clearInterval(this.updateTimer);
             }
+        },
+
+        //按下鼠标的时候被调用
+        mouseDown: function (event) {
+
+            //标记不能数钱
+            this.isCanMove = false;
+
+            //获得按下鼠标时,鼠标的y坐标
+            this.startY = event.clientY;
+            //console.log('startY:', this.startY);
+        },
+
+        //松开鼠标时被调用
+        mouseUp: function (event) {
+
+            //获得松开鼠标时，鼠标的y坐标
+            this.endY = event.clientY;
+            //console.log('endY:', this.endY);
+        },
+
+        //禁止拖拽
+        stopDrag: function () {
+            console.log('调用');
+            return false;
         }
       }
   }
@@ -132,6 +166,7 @@
     height: 100%;
     overflow: hidden;
     background: url("../assets/bg.png") no-repeat;
+    -moz-user-select: none;
 
     /* 使用弹性布局 */
     display: flex;
