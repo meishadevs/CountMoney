@@ -7,7 +7,7 @@
     <div class="count-container" v-if="isShowMask == false">
 
       <!-- 滚动的图片 s -->
-      <div>
+      <div v-bind:draggable="false">
         <img src="../assets/caitiao.png" class="caitiao-top" v-bind:draggable="false" v-bind:style="{top: caitiaoTop + 'px'}">
         <img src="../assets/caitiao.png" class="caitiao-bottom" v-bind:draggable="false" v-bind:style="{top: caitiaoBottom + 'px'}">
         <img src="../assets/qian.png" class="qian-top" v-bind:draggable="false" v-bind:style="{top: qianTop + 'px'}">
@@ -30,7 +30,7 @@
       <div class="hand"></div>
       <!-- 手 e -->
 
-      <div class="money" @mousemove="mouseDown($event)" @mouseup="mouseUp($event)">
+      <div class="money" @mousedown="mouseDown($event)" @mouseup="mouseUp($event)" v-bind:style="{ top: moneyTop + 'px' }">
         <img src="../assets/money.png" class="money-img" v-bind:draggable="false">
       </div>
     </div>
@@ -62,7 +62,7 @@
         rollSpeed: 7,
 
         //剩余时间
-        numTime: 10,
+        numTime: 20,
 
         //用于滚动背景的定时器
         scrTimer: null,
@@ -71,13 +71,22 @@
         updateTimer: null,
 
         //标记不能数钱
-        isCanMove: false,
+        isCanMove: true,
 
         //按下鼠标时，鼠标的y坐标
         startY: 0,
 
         //松开鼠标时，鼠标的y坐标
-        endY: 0
+        endY: 0,
+
+        //标记可以触摸
+        isTouch: true,
+
+        //钱的top属性值
+        moneyTop: 405,
+
+        //移动钱的定时器
+        moveMoneyTimer: null
       }
     },
 
@@ -95,6 +104,7 @@
             this.isShowMask = false;
             this.scrTimer = setInterval(this.scrollBackground, 30);
             this.updateTimer = setInterval(this.updateTime, 1000);
+            setInterval(this.update, 1);
         },
 
         //循环滚动背景
@@ -134,26 +144,60 @@
         //按下鼠标的时候被调用
         mouseDown: function (event) {
 
-            //标记不能数钱
-            this.isCanMove = false;
+            //不能再数钱
+            if(!this.isTouch) {
+              return;
+            }
 
             //获得按下鼠标时,鼠标的y坐标
             this.startY = event.clientY;
-            //console.log('startY:', this.startY);
         },
 
         //松开鼠标时被调用
         mouseUp: function (event) {
 
+            //不能数钱
+            if(!this.isTouch) {
+              return;
+            }
+
             //获得松开鼠标时，鼠标的y坐标
             this.endY = event.clientY;
-            //console.log('endY:', this.endY);
+
+            //如果向上滑动了10个像素
+            if(this.startY > this.endY) {
+
+                if (this.isCanMove) {
+                    this.isCanMove = false
+                    this.numMoney += 1;
+                    this.moveMoneyTimer = setInterval(this.moveMoney, 1);
+                }
+            }
         },
 
-        //禁止拖拽
-        stopDrag: function () {
-            console.log('调用');
-            return false;
+        moveMoney: function () {
+            this.moneyTop -= 10;
+        },
+
+        //用于检测
+        update: function () {
+
+            if (this.moneyTop <= -282) {
+                this.isCanMove = true;
+                this.moneyTop = 405;
+                clearInterval(this.moveMoneyTimer);
+            }
+
+            //如果数钱游戏结束
+            if(this.numTime <= 0) {
+
+                //关闭定时器
+                clearInterval(this.scrTimer);
+                clearInterval(this.updateTimer);
+
+                //不能再触摸
+                this.isTouch = false;
+            }
         }
       }
   }
@@ -274,9 +318,13 @@
   }
 
   .money {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     z-index: 3;
     position: absolute;
-    top: 405px;
     left: 115px;
   }
 

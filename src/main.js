@@ -4,15 +4,15 @@ import App from './App';
 import router from './router';
 import axios from 'axios';
 import qs from 'qs';
+import config from './js/config';
+
+//使用插件
+Vue.use(config);
 
 Vue.config.productionTip = false;
 
-Vue.prototype.$http = axios;
+Vue.prototype.axios = axios;
 Vue.prototype.qs = qs;
-
-//注册的Url
-Vue.prototype.registerUrl = 'http://localhost/zhsqServer/register.php';
-
 
 /* eslint-disable no-new */
 new Vue({

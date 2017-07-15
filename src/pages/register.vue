@@ -50,7 +50,7 @@
           if (this.checkCardNum()) {
 
               //使用axios发送post请求实现注册
-              this.$http({
+              this.axios({
                 method: 'post',
                 url: this.registerUrl,
                 data: this.qs.stringify({cardnum: this.cardNum}),
