@@ -30,9 +30,21 @@
       <div class="hand"></div>
       <!-- 手 e -->
 
+      <!-- 待数的钱 s -->
       <div class="money" @mousedown="mouseDown($event)" @mouseup="mouseUp($event)" v-bind:style="{ top: moneyTop + 'px' }">
         <img src="../assets/money.png" class="money-img" v-bind:draggable="false">
       </div>
+      <!-- 待数的钱 e -->
+
+      <!-- 游戏结束对话框 s -->
+      <div class="gameover-dialog" v-if="numTime <= 0">
+        <p class="title">您在刚刚的数钱游戏中</p>
+        <p class="show-num">{{ '数了 ' + numMoney + ' 张钞票' }}</p>
+        <p class="show-content">点击确认按钮进入幸运转盘</p>
+        <p class="show content">看看手气如何</p>
+        <button class="into-zp"></button>
+      </div>
+      <!-- 游戏结束对话框  e -->
     </div>
   </div>
 </template>
@@ -330,6 +342,44 @@
 
   .money img {
     width: 148px;
+    display: inline-block;
+  }
+
+  .gameover-dialog {
+    width: 414px;
+    height: 262px;
+    margin-left: -207px;
+    background: url("../assets/dialog.png") no-repeat;
+    background-size: contain;
+    text-align: center;
+    color: #fff;
+    font-family: 'microsoft yahei';
+    font-size: 22px;
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    top: 160px;
+  }
+
+  .gameover-dialog .title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .gameover-dialog .show-num {
+    margin-bottom: 30px;
+  }
+
+  .gameover-dialog .show-content {
+    margin-bottom: 10px;
+  }
+
+  .into-zp {
+    width: 120px;
+    height: 51px;
+    margin-top: 20px;
+    background: url("../assets/buttonOk.png") no-repeat;
+    background-size: contain;
     display: inline-block;
   }
 </style>
