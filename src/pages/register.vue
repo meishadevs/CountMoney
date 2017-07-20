@@ -31,8 +31,8 @@
     data: function () {
       return {
 
-        //用于记录用户输入的信用卡号后8位
-        cardNum: '',
+          //用户输入的信用卡账号
+          cardNum: '',
 
         //标记是否显示信用卡号后8位输入错误时产生的提示信息
         isShowNotice: false,
@@ -123,15 +123,6 @@
     height: 100%;
     background: url("../assets/bg.png") no-repeat;
     text-align: center;
-
-    /* 主轴的方向为竖直方向 */
-    flex-direction: column;
-
-    /* 标签在主轴上的对齐方式为左对齐 */
-    justify-content: flex-start;
-
-    /* 标签在侧轴上的对齐方式为居中对齐 */
-    align-items: center;
   }
 
   .notice-title {

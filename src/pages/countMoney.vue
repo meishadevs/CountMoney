@@ -42,7 +42,7 @@
         <p class="show-num">{{ '数了 ' + numMoney + ' 张钞票' }}</p>
         <p class="show-content">点击确认按钮进入幸运转盘</p>
         <p class="show content">看看手气如何</p>
-        <button class="into-zp"></button>
+        <button class="into-zp" @click="intoTurntable"></button>
       </div>
       <!-- 游戏结束对话框  e -->
     </div>
@@ -55,6 +55,9 @@
     data: function () {
       return {
 
+        //数钱的张数
+        numMoney: 0,
+
         //是否显示模板
         isShowMask: true,
 
@@ -66,9 +69,6 @@
 
         qianTop: 42,
         qianBottom: 227,
-
-        //钱的张数
-        numMoney: 0,
 
         //背景滚动的速度
         rollSpeed: 7,
@@ -210,6 +210,19 @@
                 //不能再触摸
                 this.isTouch = false;
             }
+        },
+
+        //进入转转盘
+        intoTurntable: function () {
+
+            if (this.numMoney <= 0) {
+                window.location.href = '#/';
+                return;
+            }
+
+            localStorage.setItem('numMoney', this.numMoney);
+
+            window.location.href = '#/turnTable';
         }
       }
   }
@@ -307,6 +320,10 @@
   .showtime-dialog img {
     width: 32px;
     height: 30px;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     display: inline-block;
   }
 

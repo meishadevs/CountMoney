@@ -30,6 +30,7 @@
 
       </div>
       <!-- 下面的按钮 e -->
+
     </div>
   </div>
 </template>
@@ -37,17 +38,30 @@
 
 <script>
   module.exports = {
+
+      data: function () {
+      return {
+          audio: null
+      };
+    },
+
+      //初始化
+      mounted: function () {
+        this.$nextTick(function () {
+        })
+      },
+
       methods: {
           startGame: function () {
 
-              // 获得存储在本地的信用卡账号
-              var cardNum = localStorage.getItem('cardNum');
+            //获得存储在本地的信用卡账号
+            var cardNum = localStorage.getItem('cardNum');
 
-              if (cardNum != null) {
-                  window.location.href = '#/countMoney';
-              } else {
-                  window.location.href = '#/register';
-              }
+           if (cardNum != null) {
+              window.location.href = '#/countMoney';
+           } else {
+               window.location.href = '#/register';
+          }
           }
       }
   };
