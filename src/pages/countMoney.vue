@@ -220,7 +220,7 @@
                 return;
             }
 
-            localStorage.setItem('numMoney', this.numMoney);
+            sessionStorage.setItem('numMoney', this.numMoney);
 
             window.location.href = '#/turnTable';
         }

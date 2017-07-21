@@ -12,6 +12,9 @@ export default {
       Vue.prototype.registerUrl = Vue.prototype.serverUrl + 'zhsqServer/register.php',
 
     //获得用户在数钱游戏中的排名的Url
-    Vue.prototype.rankingUrl = Vue.prototype.serverUrl + 'zhsqServer/ranking.php'
+    Vue.prototype.rankingUrl = Vue.prototype.serverUrl + 'zhsqServer/ranking.php',
+
+    //将用户在游戏中获得的金额发送到服务器
+    Vue.prototype.sendMoneyUrl = Vue.prototype.serverUrl + 'zhsqServer/sendResult.php'
   }
 }

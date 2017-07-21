@@ -11,6 +11,7 @@ import account from '@/pages/account.vue';
 import register from '@/pages/register.vue';
 import countMoney from '@/pages/countMoney.vue';
 import turnTable from '@/pages/turnTable.vue';
+import result from '@/pages/result.vue';
 
 Vue.use(Router);
 
@@ -55,6 +56,11 @@ export default new Router({
       path: '/turnTable',
       name: 'turnTable',
       component: turnTable
+    },
+    {
+      path: '/result',
+      name: 'result',
+      component: result
     }
   ]
 });

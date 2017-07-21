@@ -70,7 +70,7 @@
         this.cardNum = localStorage.getItem('cardNum');
 
         //获得用户在数钱游戏中数了多少张钱
-        this.numMoney = localStorage.getItem('numMoney');
+        this.numMoney = sessionStorage.getItem('numMoney');
 
         //使用axios发送post请求,获得当前在数钱游戏中的排名
         this.axios({
@@ -191,10 +191,12 @@
         //计算转盘应旋转多少角度
         this.sumRotation();
 
+        sessionStorage.setItem('money', this.money);
+
         this.rotate = 360 * 7 + this.rotate;
 
         setTimeout(function () {
-            window.location.href = '#/';
+            window.location.href = '#/result';
         }, 3000);
       }
     }
