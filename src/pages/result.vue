@@ -57,7 +57,6 @@
               'Content-Type': 'application/x-www-form-urlencoded',
             }
           }).then(res => {
-              console.log(res.data[0]);
               this.year = res.data[0].year;
               this.month = res.data[0].month;
               this.day = res.data[0].day;

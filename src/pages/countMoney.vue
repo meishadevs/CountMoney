@@ -361,7 +361,7 @@
     width: 148px;
     display: inline-block;
   }
-
+  
   .gameover-dialog {
     width: 414px;
     height: 262px;
