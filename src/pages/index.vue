@@ -2,7 +2,7 @@
 <!-- 首页 -->
 
 <template>
-  <div class="index">
+  <div class="index" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
     <div class="container">
 
       <!-- 开始游戏按钮 s -->
@@ -41,7 +41,8 @@
 
       data: function () {
       return {
-          audio: null
+          audio: null,
+          bg: require('../assets/bgIndex.png')
       };
     },
 
@@ -72,7 +73,7 @@
   .index {
     width: 100%;
     height: 100%;
-    background: url('../assets/bgIndex.png') no-repeat;
+    background-repeat: no-repeat;
   }
 
   .index .container {

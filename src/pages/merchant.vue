@@ -2,17 +2,27 @@
 <!-- 活动商户 -->
 
 <template>
-  <div class="merchant">
+  <div class="merchant" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
     <a class="into-index" href="#/"></a>
   </div>
 </template>
+
+
+<script>
+  module.exports = {
+    data: function () {
+      return {
+        bg: require("../assets/bgMerchant.png")
+      }
+    }
+  }
+</script>
 
 
 <style scoped>
   .merchant {
     width: 100%;
     height: 100%;
-    background: url("../assets/bgMerchant.png") no-repeat;
 
     /* 使用弹性布局 */
     display: flex;

@@ -2,7 +2,7 @@
 <!-- 我的账户页 -->
 
 <template>
-  <div class="account">
+  <div class="account" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
     <div class="title"></div>
     <ul class="list-item">
       <li class="item" v-for="card in filterCard" v-if="totalCard > 0">
@@ -29,6 +29,8 @@
   module.exports = {
     data: function () {
       return {
+        bg: require("../assets/bg.png"),
+
         cardNum: '',
 
         //保存用户获得的优惠券信息
@@ -120,7 +122,6 @@
   .account {
     width: 100%;
     height: 100%;
-    background: url("../assets/bg.png") no-repeat;
 
     /* 使用弹性布局 */
     display: flex;

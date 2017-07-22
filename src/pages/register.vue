@@ -2,7 +2,7 @@
 <!-- 登录页 -->
 
 <template>
-  <div class="register">
+  <div class="register" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
     <p class="notice-title">请输入 您的信用卡号后8位</p>
 
     <!-- 信用卡号输入框 s -->
@@ -30,6 +30,7 @@
 
     data: function () {
       return {
+          bg: require("../assets/bg.png"),
 
           //用户输入的信用卡账号
           cardNum: '',
@@ -121,7 +122,6 @@
   .register {
     width: 100%;
     height: 100%;
-    background: url("../assets/bg.png") no-repeat;
     text-align: center;
   }
 

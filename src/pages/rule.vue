@@ -2,17 +2,27 @@
 <!-- 活动规则页 -->
 
 <template>
-  <div class="rule">
+  <div class="rule" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
     <a class="into-index" href="#/"></a>
   </div>
 </template>
+
+
+<script>
+  module.exports = {
+    data: function () {
+      return {
+        bg: require("../assets/bgRule.png")
+      }
+    }
+  }
+</script>
 
 
 <style scoped>
   .rule {
     width: 100%;
     height: 100%;
-    background: url("../assets/bgRule.png") no-repeat;
 
     /* 使用弹性布局 */
     display: flex;

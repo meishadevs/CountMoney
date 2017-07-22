@@ -2,8 +2,8 @@
 <!-- 活动规则页 -->
 
 <template>
-  <div class="count-money">
-    <div class="mask" v-if="isShowMask" @click="startCountMoney()"></div>
+  <div class="count-money" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
+    <div class="mask" v-if="isShowMask" @click="startCountMoney()" v-bind:style="{background:'url(' + bgMask + ') no-repeat'}"></div>
     <div class="count-container" v-if="isShowMask == false">
 
       <!-- 滚动的图片 s -->
@@ -27,7 +27,8 @@
       <!-- 显示时间 e -->
 
       <!-- 手 s -->
-      <div class="hand"></div>
+      <div class="hand" v-bind:style="{background:'url(' + bgHand + ') no-repeat'}"
+      ></div>
       <!-- 手 e -->
 
       <!-- 待数的钱 s -->
@@ -37,7 +38,7 @@
       <!-- 待数的钱 e -->
 
       <!-- 游戏结束对话框 s -->
-      <div class="gameover-dialog" v-if="numTime <= 0">
+      <div class="gameover-dialog" v-if="numTime <= 0" v-bind:style="{background:'url(' + bgDialog + ') no-repeat'}">
         <p class="title">您在刚刚的数钱游戏中</p>
         <p class="show-num">{{ '数了 ' + numMoney + ' 张钞票' }}</p>
         <p class="show-content">点击确认按钮进入幸运转盘</p>
@@ -54,6 +55,13 @@
   module.exports = {
     data: function () {
       return {
+        bg: require("../assets/bg.png"),
+
+        bgMask: require("../assets/tishi.png"),
+
+        bgHand: require("../assets/hand.png"),
+
+        bgDialog: require("../assets/dialog.png"),
 
         //数钱的张数
         numMoney: 0,
@@ -132,6 +140,7 @@
           }
 
           if(this.caitiaoBottom > 662) {
+            this.caitiaoBottom = 42;
             this.caitiaoBottom = 42;
           }
 
@@ -234,7 +243,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: url("../assets/bg.png") no-repeat;
     -moz-user-select: none;
 
     /* 使用弹性布局 */
@@ -255,7 +263,6 @@
   .mask{
     width: 100%;
     height: 662px;
-    background: url("../assets/tishi.png") no-repeat;
     position: relative;
     z-index: 100;
   }
@@ -340,7 +347,6 @@
     height: 347px;
     margin-left: -110px;
     margin-top: 221px;
-    background: url("../assets/hand.png") no-repeat;
     transform: scale(0.75);
     z-index: 2;
     position: relative;
@@ -361,12 +367,11 @@
     width: 148px;
     display: inline-block;
   }
-  
+
   .gameover-dialog {
     width: 414px;
     height: 262px;
     margin-left: -207px;
-    background: url("../assets/dialog.png") no-repeat;
     background-size: contain;
     text-align: center;
     color: #fff;
@@ -394,7 +399,7 @@
   .into-zp {
     width: 120px;
     height: 51px;
-    margin-top: 20px;
+    margin-top: 14px;
     background: url("../assets/buttonOk.png") no-repeat;
     background-size: contain;
     display: inline-block;

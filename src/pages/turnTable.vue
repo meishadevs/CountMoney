@@ -2,10 +2,10 @@
 <!-- 转盘页 -->
 
 <template>
-  <div class="turntable">
+  <div class="turntable" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
 
     <!-- 转盘上的指针 s -->
-    <div class="pointer" v-bind:style="{ transform: 'rotate(' + rotate + 'deg)' }">
+    <div class="pointer" v-bind:style="{background:'url(' + bgPointer + ') no-repeat', backgroundSize:'contain', transform: 'rotate(' + rotate + 'deg)' }">
     </div>
     <!-- 转盘上的指针 e -->
 
@@ -24,6 +24,9 @@
   module.exports = {
     data: function () {
       return {
+        bg: require("../assets/bgTurntable.png"),
+
+        bgPointer: require("../assets/turn_arrow.png"),
 
         //玩家在数钱游戏中的排名
         ranking: 0,
@@ -208,7 +211,6 @@
   .turntable {
     width: 100%;
     height: 100%;
-    background: url("../assets/bgTurntable.png") no-repeat;
 
     display: flex;
 
@@ -227,8 +229,6 @@
     height: 94px;
     margin-top: 246px;
     margin-left: -3px;
-    background: url("../assets/turn_arrow.png") no-repeat;
-    background-size: contain;
     transform-origin: 50% 50%;
     transition: all 0.6s;
 

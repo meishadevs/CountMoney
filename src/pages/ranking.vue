@@ -2,7 +2,7 @@
 <!-- 排行榜页 -->
 
 <template>
-  <div class="ranking">
+  <div class="ranking" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
     <ul class="ranking-list">
       <li class="item" v-for="(ranking, index) in formatRankingList">
         {{ index + 1 + ' ' + '信用卡号后8位 ' + ranking.cardNum + ' 张数 ' + ranking.numMoney }}
@@ -17,7 +17,9 @@
   module.exports = {
     data: function () {
       return {
-          rankingList: []
+          rankingList: [],
+
+        bg: require("../assets/bgRanking.png")
       }
     },
 
@@ -66,7 +68,6 @@
   .ranking {
     width: 100%;
     height: 100%;
-    background: url("../assets/bgRanking.png") no-repeat;
 
     /* 使用弹性布局 */
     display: flex;
@@ -82,6 +83,7 @@
   }
 
   .ranking-list {
+    height: 360px;
     margin-top: 173px;
   }
 

@@ -2,7 +2,7 @@
 <!-- 游戏结果页 -->
 
 <template>
-  <div class="ranking">
+  <div class="result" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
     <p class="title">恭喜您，您在游戏中获得一张现金劵</p>
     <p class="title-content">现金劵可以在活动商户中使用</p>
     <div class="item">
@@ -18,6 +18,7 @@
   module.exports = {
     data: function () {
       return {
+          bg: require("../assets/bg.png"),
           cardNum: '',
           money: 0,
           numMoney: 0,
@@ -68,10 +69,9 @@
 
 
 <style scoped>
-  .ranking {
+  .result {
     width: 100%;
     height: 100%;
-    background: url("../assets/bg.png") no-repeat;
 
     /* 使用弹性布局 */
     display: flex;
