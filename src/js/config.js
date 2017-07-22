@@ -18,6 +18,9 @@ export default {
     Vue.prototype.sendMoneyUrl = Vue.prototype.serverUrl + 'zhsqServer/sendResult.php',
 
     //获得优惠券的Url
-    Vue.prototype.getCardUrl = Vue.prototype.serverUrl + 'zhsqServer/cardinfo.php'
+    Vue.prototype.getCardUrl = Vue.prototype.serverUrl + 'zhsqServer/cardinfo.php',
+
+    //获得数钱游戏中排名前十的用户的Url
+    Vue.prototype.getRankingListUrl = Vue.prototype.serverUrl + 'zhsqServer/getRankingList.php'
   }
 }
