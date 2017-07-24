@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="100215b2-0484-4648-807a-211276e2c2fb" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.babelrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.postcssrc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/build.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/check-versions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/dev-client.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/dev-server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/vue-loader.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/webpack.base.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/webpack.dev.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/webpack.prod.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config/dev.env.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config/prod.env.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/SceneStartBackground.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/account.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bank.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bgAccount.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bgCount.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bgIndex.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bgMerchant.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bgRanking.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bgRule.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/bgTurntable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/btn_arrow_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/btn_arrow_l_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/btn_arrow_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/btn_arrow_r_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/buttonAccount.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/buttonMerchant.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/buttonOk.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/buttonRanking.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/buttonReturn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/buttonStart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/caidai.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/caitiao.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/clock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/dialog.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/eightyyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/fivejiao.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/fiveyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/fortyyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/green_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/greenimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/hand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/hundredyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/hundretwentyyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/item.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/layer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/limit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/medal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/merchant.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/moble.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/money.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/number.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/oneyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/qian.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/rankinglist.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/redPaper.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/rule.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/showMenoy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/shuqian.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/start.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/tenyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/tishi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/title.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/turn_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/turn_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/twentyyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/twoyuan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/account.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/countMoney.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/index.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/merchant.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/ranking.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/register.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/result.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/rule.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/turnTable.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/reset.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/bgIndex.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/music/money.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/music/sound_keyPress.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/music/turntable.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/music/win.mp3" afterPath="" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zhsqClient/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/zhsqClient/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countMoney" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countMoney" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countMoney" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countMoney" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhsqClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="ignore_missing_gitignore" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="100215b2-0484-4648-807a-211276e2c2fb" name="Default" comment="" />
+      <created>1500882909649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1500882909649</updated>
+      <workItem from="1500882913376" duration="600000" />
+      <workItem from="1500883969507" duration="142000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="742000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/zhsqClient/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
