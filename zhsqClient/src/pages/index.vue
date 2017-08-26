@@ -17,7 +17,8 @@
       <div class="bottom">
 
         <!-- 活动商户按钮 s -->
-        <a class="merchant" href="#/merchant"></a>
+        <!--<a class="merchant" href="#/merchant"></a>-->
+        <router-link class="merchant" to="/merchant"></router-link>
         <!-- 活动商户按钮 e -->
 
         <!-- 活动规则按钮 s -->
