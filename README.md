@@ -37,16 +37,16 @@
 	│   ├── App.vue                  // 页面入口文件
 	│   └── index.js                 // 程序入口文件
 	├── static                       // 存放一些静态文件
-	│ 	├── css   					 // 存放CSS文件	
-	│ 	│ 	└── reset.css            // 重置网页的样式
-	│   ├── .gitkeep				 // 只是一个占位符，一个假文件
-	│   └── favicon.png    			 // 网站的图标
-	├── .babelrc					 // babel编译的一些配置
-	├── .editorconfig    			 // 编辑器的配置
+	│ 	├── css   		 // 存放CSS文件	
+	│ 	│ └── reset.css          // 重置网页的样式
+	│   	├── .gitkeep		 // 只是一个占位符，一个假文件
+	│ 	└── favicon.png    	 // 网站的图标
+	├── .babelrc			 // babel编译的一些配置
+	├── .editorconfig    		 // 编辑器的配置
 	├── .gitignore                   // 提交到git上时，忽略提交的文件和文件夹
 	├── .postcssrc.js                // 自动加载配置为PostCSS  
 	├── index.html                   // 入口HTML文件
-	└── package.json                 // 项目的配置文件
+	└── package.json    
 
 ## 运行项目
 
