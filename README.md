@@ -52,7 +52,7 @@
 
 **第一步：将项目克隆到本地**  
 
-	https://github.com/meishadevs/CountMoney.git
+	git clone https://github.com/meishadevs/CountMoney.git
 
 **第二步：进入zhsqClient目录下**  
 	
