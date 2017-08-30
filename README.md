@@ -1,5 +1,5 @@
 # 数钱游戏
-> countMoney是一个简单的HTML5版数钱游戏，整个游戏由首页、注册页、数钱页、转转盘页、游戏结果展示页、我的账户页、排行榜页、活动商户页、活动规则页和我的账户页组成，整个游戏由注册、数钱、转转盘、查看用户获得的优惠券、查看排行榜等功能。
+> countMoney是一个简单的HTML5版数钱游戏，整个游戏由首页、注册页、数钱页、转转盘页、游戏结果展示页、我的账户页、排行榜页、活动商户页、活动规则页组成，整个游戏包含注册、数钱、转转盘、查看用户获得的优惠券、查看排行榜等功能。
 
 ## 项目的一些链接
 **游戏地址：[http://zhsq-dswz.stor.sinaapp.com/index.html#/](http://zhsq-dswz.stor.sinaapp.com/index.html#/)**  
@@ -12,13 +12,13 @@
 - **数据库：** MySQL
 
 ## 项目简介
-**项目描述：** 整个项目的文件由zhsqClient、zhsqServer、sql三个文件夹组成，其中zhsqClient存放网站的前端代码、zhsqServer中存放的是网站的后台代码，sql中存放的是网站的数据库文件
+**项目描述：** 整个项目的文件由zhsqClient、zhsqServer、sql三个文件夹组成，其中zhsqClient存放网站的前端代码、zhsqServer中存放的是网站的服务器端代码，sql中存放的是网站的数据库文件
 
 **zhsqClient的目录结构**
 
 	├── build                        // Webpack配置文件                      
 	├── config                       // 项目打包路径                        
-	├── src       					 // 源码目录                                       
+	├── src       			 // 源码目录                                       
 	│   ├── assets                   // 项目的资源马路                      
 	│   ├── js                       // 一些常用的js脚本                           
 	│   │   └── config.js            // 项目的一些配置信息                                   
