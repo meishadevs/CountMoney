@@ -1,5 +1,5 @@
 # 数钱游戏
-> countMoney是一个简单的HTML5版数钱游戏，整个游戏由首页、注册页、数钱页、转转盘页、游戏结果展示页、我的账户页、排行榜页、活动商户页、活动规则页和我的账户页组成，整个游戏由注册、数钱、转转盘、查看用户获得的优惠券、查看排行榜等功能。
+> countMoney是一个简单的HTML5版数钱游戏，整个游戏由首页、注册页、数钱页、转转盘页、游戏结果展示页、我的账户页、排行榜页、活动商户页、活动规则页组成，整个游戏包含注册、数钱、转转盘、查看用户获得的优惠券、查看排行榜等功能。
 
 ## 项目的一些链接
 **游戏地址：[http://zhsq-dswz.stor.sinaapp.com/index.html#/](http://zhsq-dswz.stor.sinaapp.com/index.html#/)**  
@@ -12,13 +12,13 @@
 - **数据库：** MySQL
 
 ## 项目简介
-**项目描述：** 整个项目的文件由zhsqClient、zhsqServer、sql三个文件夹组成，其中zhsqClient存放网站的前端代码、zhsqServer中存放的是网站的后台代码，sql中存放的是网站的数据库文件
+**项目描述：** 整个项目的文件由zhsqClient、zhsqServer、sql三个文件夹组成，其中zhsqClient存放网站的前端代码、zhsqServer中存放的是网站的服务器端代码，sql中存放的是网站的数据库文件
 
 **zhsqClient的目录结构**
 
 	├── build                        // Webpack配置文件                      
 	├── config                       // 项目打包路径                        
-	├── src       					 // 源码目录                                       
+	├── src       			 // 源码目录                                       
 	│   ├── assets                   // 项目的资源马路                      
 	│   ├── js                       // 一些常用的js脚本                           
 	│   │   └── config.js            // 项目的一些配置信息                                   
@@ -37,16 +37,16 @@
 	│   ├── App.vue                  // 页面入口文件
 	│   └── index.js                 // 程序入口文件
 	├── static                       // 存放一些静态文件
-	│ 	├── css   					 // 存放CSS文件	
-	│ 	│ 	└── reset.css            // 重置网页的样式
-	│   ├── .gitkeep				 // 只是一个占位符，一个假文件
-	│   └── favicon.png    			 // 网站的图标
-	├── .babelrc					 // babel编译的一些配置
-	├── .editorconfig    			 // 编辑器的配置
+	│ 	├── css   		 // 存放CSS文件	
+	│ 	│ └── reset.css          // 重置网页的样式
+	│   	├── .gitkeep		 // 只是一个占位符，一个假文件
+	│ 	└── favicon.png    	 // 网站的图标
+	├── .babelrc			 // babel编译的一些配置
+	├── .editorconfig    		 // 编辑器的配置
 	├── .gitignore                   // 提交到git上时，忽略提交的文件和文件夹
 	├── .postcssrc.js                // 自动加载配置为PostCSS  
 	├── index.html                   // 入口HTML文件
-	└── package.json                 // 项目的配置文件
+	└── package.json    
 
 ## 运行项目
 
@@ -82,7 +82,7 @@ WampServer中使用phpMyAdmin管理MySQL数据库，单击上一步操作中出�
 ![](http://oqdvwkahb.bkt.clouddn.com/database.PNG)
 
 **第四步：将网站需要用到的数据导入数据库中**  
-选择导入，然后会弹出下图所示的界面，单击界面上的Choose File按钮，选择导入的文件为sql文件夹下的dswzdb.sql，将文件字符集设置为utf-8，格式选为SQL，设置完成后点击执行  
+选择导入，然后会弹出下图所示的界面，单击界面上的Choose File按钮，选择导入的文件为sql文件夹下的zhsqdb.sql，将文件字符集设置为utf-8，格式选为SQL，设置完成后点击执行  
 ![](insert.PNG)
 
 **第五步：执行后的效果**  
@@ -90,55 +90,41 @@ WampServer中使用phpMyAdmin管理MySQL数据库，单击上一步操作中出�
 ![](table.PNG)
 
 **第六步：部署服务器端代码**  
-关闭phpMyAdmin，回到第一步的操作，再次点击绿色的小图标，在弹出的列表项中选择www directory，将dswzServer文件夹拷贝到打开的目录下，此时一个电商网站的后台就部署完成了，可以正常的使用网站中的注册、登录、省市区三级联动、商品翻页等功能  
+关闭phpMyAdmin，回到第一步的操作，再次点击绿色的小图标，在弹出的列表项中选择www directory，将dswzServer文件夹拷贝到打开的目录下，此时中行数钱后台就部署完成了，可以正常的使用网站中的注册、登录、省市区三级联动、商品翻页等功能  
 ![](folder.PNG)
 
 ## 特别说明
-当你的服务器地址和我设置的服务器端地址不同时，可以修改**ImoocDSWZ\dswzClient\src\js**下的config.js文件
+当你的服务器地址和我设置的服务器端地址不同时，可以修改**countMoney\zhsqClient\src\js**下的config.js文件
 
 	/**
-	 * Created by Administrator on 2017/4/10.
-	 * 用于处理一些网站的配置信息
+	 * 一些全局参数
 	 */
 
-	//存放一些网站的配置信息
-	var config = {
+	export default {
+	  install(Vue, option) {
 
-    //获得省、市、区数据的url
-    'addressUrl': 'http://localhost/dswzServer/place.php',
+	      //服务器端的Url
+	      Vue.prototype.serverUrl = 'http://localhost/',
 
-    //获得商品咨询信息的url
-    'advisoryUrl': 'http://localhost/dswzServer/advisory.php',
+	      //注册信用卡账号的Url
+	      Vue.prototype.registerUrl = Vue.prototype.serverUrl + 'zhsqServer/register.php',
 
-    //获得商品信息的url
-    'productUrl': 'http://localhost/dswzServer/product.php',
+	    //获得用户在数钱游戏中的排名的Url
+	    Vue.prototype.rankingUrl = Vue.prototype.serverUrl + 'zhsqServer/ranking.php',
 
-    //淘宝搜索的url
-    'taobaoUrl': 'https://suggest.taobao.com/sug',
+	    //将用户在游戏中获得的金额发送到服务器的Url
+	    Vue.prototype.sendMoneyUrl = Vue.prototype.serverUrl + 'zhsqServer/sendResult.php',
 
-    //百度搜索的url
-    'baiduUrl': 'http://www.baidu.com/s',
+	    //获得优惠券的Url
+	    Vue.prototype.getCardUrl = Vue.prototype.serverUrl + 'zhsqServer/cardinfo.php',
 
-    //注册账号的url
-    'registerUrl': 'http://localhost/dswzServer/register.php',
+	    //获得数钱游戏中排名前十的用户的Url
+	    Vue.prototype.getRankingListUrl = Vue.prototype.serverUrl + 'zhsqServer/getRankingList.php'
+	  }
+	}
 
-    //登录账号的url
-    'loginUrl': 'http://localhost/dswzServer/login.php',
 
-    //每页的第1条商品咨询信息的下标
-    'advisoryStartIndex' : 0,
-
-    //每页展示商品咨询信息的条数
-    'advisoryAmount' : 5,
-
-    //每页第一条商品信息的下标
-    'productStartIndex': 0,
-
-    //每页展示的商品信息的条数
-    'productAmount': 6
-	};
-
-修改完成后再在命令行中执行一次`gulp defaultTask`命令，会重新编译打包，或者执行`gulp server`命令，当src文件夹下有文件改变的时候，会自动编译打包到dist文件夹下
+修改完成后再在命令行中执行一次`npm run build`命令，会重新编译打包，或者执行`npm run dev`命令，当src文件夹下有文件改变的时候，会自动编译打包到dist文件夹下
 
 当你的数据库的设置和我的默认设置不同的时候，可以修改**ImoocDSWZ\dswzServer下的connect.php文件
 
@@ -154,7 +140,7 @@ WampServer中使用phpMyAdmin管理MySQL数据库，单击上一步操作中出�
 	$db_pass = "";
 	
 	//数据库名 
-	$db_name = "dswzdb";
+	$db_name = "zhsqdb";
 	
 	//时区 
 	$timezone = "Asia/Shanghai";
