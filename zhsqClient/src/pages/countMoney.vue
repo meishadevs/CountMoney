@@ -243,7 +243,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    -moz-user-select: none;
 
     /* 使用弹性布局 */
     display: flex;
@@ -269,11 +268,6 @@
 
   .caitiao-top,
   .caitiao-bottom {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     z-index: 1;
     position: absolute;
     left: 0;
@@ -282,11 +276,6 @@
   .qian-top,
   .qian-bottom {
     width: 100%;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     position: absolute;
     z-index: 1;
   }
@@ -301,11 +290,6 @@
     border-radius: 25px;
     color: #fff;
     text-align: center;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     z-index: 4;
     transform: scale(0.7);
     position: relative;
@@ -315,11 +299,6 @@
     width: 100%;
     height: 30px;
     padding-left: 100px;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     z-index: 4;
     position: relative;
   }
@@ -327,10 +306,6 @@
   .showtime-dialog img {
     width: 32px;
     height: 30px;
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     display: inline-block;
   }
 
@@ -353,11 +328,6 @@
   }
 
   .money {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     z-index: 3;
     position: absolute;
     left: 115px;
