@@ -161,3 +161,7 @@ WampServer中使用phpMyAdmin管理MySQL数据库，单击上一步操作中出�
 	date_default_timezone_set($timezone);
 	
 	?>
+
+## 更新日志
+- 2017-10-16 修复了修复了鼠标滑出纸币区不数钱的bug
+- 2017-10-15 修复了数钱时会选中页面上文本的bug
