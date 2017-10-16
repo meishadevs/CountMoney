@@ -16,8 +16,8 @@
 
 **zhsqClient的目录结构**
 
-	├── build                        // Webpack配置文件                      
-	├── config                       // 项目打包路径                        
+	├── build                        // Webpack的基本配置文件，开发环境配置文件，生产环境配置文件          
+	├── config                       // 项目打包路径                       
 	├── src       			 // 源码目录                                       
 	│   ├── assets                   // 项目的资源马路                      
 	│   ├── js                       // 一些常用的js脚本                           

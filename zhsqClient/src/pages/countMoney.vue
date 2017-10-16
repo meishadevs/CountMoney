@@ -4,7 +4,7 @@
 <template>
   <div class="count-money" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
     <div class="mask" v-if="isShowMask" @click="startCountMoney()" v-bind:style="{background:'url(' + bgMask + ') no-repeat'}"></div>
-    <div class="count-container" v-if="isShowMask == false">
+    <div class="count-container" v-if="isShowMask == false" @mouseup="mouseUp($event)">
 
       <!-- 滚动的图片 s -->
       <div v-bind:draggable="false">
@@ -177,23 +177,25 @@
         //松开鼠标时被调用
         mouseUp: function (event) {
 
-            //不能数钱
-            if(!this.isTouch) {
-              return;
+          //不能数钱
+          if(!this.isTouch) {
+            return;
+          }
+
+          //获得松开鼠标时，鼠标的y坐标
+          this.endY = event.clientY;
+
+          //如果向上滑动了10个像素
+          if(this.startY - this.endY > 10) {
+
+            if (this.isCanMove) {
+              this.isCanMove = false
+              this.numMoney += 1;
+              this.moveMoneyTimer = setInterval(this.moveMoney, 1);
             }
+          }
 
-            //获得松开鼠标时，鼠标的y坐标
-            this.endY = event.clientY;
-
-            //如果向上滑动了10个像素
-            if(this.startY > this.endY) {
-
-                if (this.isCanMove) {
-                    this.isCanMove = false
-                    this.numMoney += 1;
-                    this.moveMoneyTimer = setInterval(this.moveMoney, 1);
-                }
-            }
+          this.startY = null;
         },
 
         moveMoney: function () {
