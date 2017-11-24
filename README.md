@@ -46,7 +46,7 @@
 	├── .gitignore                   // 提交到git上时，忽略提交的文件和文件夹
 	├── .postcssrc.js                // 自动加载配置为PostCSS  
 	├── index.html                   // 入口HTML文件
-	└── package.json    
+	└── package.json                 // 项目配置文件
 
 ## 运行项目
 
