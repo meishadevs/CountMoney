@@ -2,20 +2,13 @@
 <!-- 活动规则页 -->
 
 <template>
-  <div class="rule" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
-    <a class="into-index" href="#/"></a>
+  <div class="rule">
+    <router-link class="into-index" to="/"></router-link>
   </div>
 </template>
 
 
 <script>
-  module.exports = {
-    data: function () {
-      return {
-        bg: require("../assets/bgRule.png")
-      }
-    }
-  }
 </script>
 
 
@@ -23,6 +16,7 @@
   .rule {
     width: 100%;
     height: 100%;
+    background: url("../../static/images/bgRule.png") no-repeat;
 
     /* 使用弹性布局 */
     display: flex;
@@ -37,7 +31,7 @@
   .into-index {
     width: 202px;
     height: 90px;
-    background: url("../assets/buttonReturn.png");
+    background: url("../../static/images/buttonReturn.png") no-repeat;
     display: inline-block;
     transform: scale(0.5);
     position: relative;

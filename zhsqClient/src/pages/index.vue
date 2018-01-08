@@ -1,8 +1,7 @@
-
 <!-- 首页 -->
 
 <template>
-  <div class="index" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
+  <div class="index">
     <div class="container">
 
       <!-- 开始游戏按钮 s -->
@@ -10,23 +9,22 @@
       <!-- 开始游戏按钮 e -->
 
       <!-- 排行榜按钮 s -->
-      <a class="ranking" href="#/ranking"></a>
+      <router-link class="ranking" to="/ranking"></router-link>
       <!-- 排行榜按钮 e -->
 
       <!-- 下面的按钮 s -->
       <div class="bottom">
 
         <!-- 活动商户按钮 s -->
-        <!--<a class="merchant" href="#/merchant"></a>-->
         <router-link class="merchant" to="/merchant"></router-link>
         <!-- 活动商户按钮 e -->
 
         <!-- 活动规则按钮 s -->
-        <a class="rule" href="#/rule">活动规则</a>
+        <router-link class="rule" to="/rule">活动规则</router-link>
         <!-- 活动规则按钮 e -->
 
         <!-- 我的账户按钮 s -->
-        <a class="account" href="#/account"></a>
+        <router-link class="account" to="/account"></router-link>
         <!-- 我的账户按钮 e -->
 
       </div>
@@ -38,34 +36,29 @@
 
 
 <script>
-  module.exports = {
+  import {mapState, mapActions} from 'vuex';
 
-      data: function () {
-      return {
-          audio: null,
-          bg: require('../assets/bgIndex.png')
-      };
-    },
+  export default {
 
-      //初始化
-      mounted: function () {
-        this.$nextTick(function () {
-        })
-      },
+    methods: {
 
-      methods: {
-          startGame: function () {
+      ...mapActions([
+          'setCardNum'
+      ]),
 
-            //获得存储在本地的信用卡账号
-            var cardNum = localStorage.getItem('cardNum');
+      startGame: function () {
 
-           if (cardNum != null) {
-              window.location.href = '#/countMoney';
-           } else {
-               window.location.href = '#/register';
-          }
-          }
+        //获得存储在本地的信用卡账号
+        var cardNum = localStorage.getItem('cardNum');
+
+        if (cardNum != null) {
+          this.setCardNum(cardNum);
+          this.$router.push('/countMoney');
+        } else {
+          this.$router.push('/register');
+        }
       }
+    }
   };
 </script>
 
@@ -74,6 +67,7 @@
   .index {
     width: 100%;
     height: 100%;
+    background: url("../../static/images/bgIndex.png");
     background-repeat: no-repeat;
   }
 
@@ -97,7 +91,7 @@
     width: 317px;
     height: 124px;
     margin-top: 422px;
-    background: url("../assets/buttonStart.png") no-repeat;
+    background: url("../../static/images/buttonStart.png") no-repeat;
     transform: scale(0.5);
   }
 
@@ -106,7 +100,7 @@
     width: 245px;
     height: 98px;
     margin-top: -42px;
-    background: url("../assets/buttonRanking.png") no-repeat;
+    background: url("../../static/images/buttonRanking.png") no-repeat;
     transform: scale(0.5);
   }
 
@@ -119,7 +113,7 @@
     width: 204px;
     height: 61px;
     margin-left: -50px;
-    background: url("../assets/buttonMerchant.png") no-repeat;
+    background: url("../../static/images/buttonMerchant.png") no-repeat;
     transform: scale(0.6);
   }
 
@@ -144,7 +138,7 @@
     width: 204px;
     height: 61px;
     margin-right: -50px;
-    background: url("../assets/buttonAccount.png") no-repeat;
+    background: url("../../static/images/buttonAccount.png") no-repeat;
     transform: scale(0.6);
   }
 </style>

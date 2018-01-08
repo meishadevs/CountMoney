@@ -1,8 +1,6 @@
 
 import Vue from 'vue';
-import Router from 'vue-router';
-
-// 引用页面模板，供路由使用
+import VueRouter from 'vue-router';
 import index from '@/pages/index.vue';
 import ranking from '@/pages/ranking.vue';
 import rule from '@/pages/rule.vue';
@@ -13,9 +11,9 @@ import countMoney from '@/pages/countMoney.vue';
 import turnTable from '@/pages/turnTable.vue';
 import result from '@/pages/result.vue';
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
+export default new VueRouter({
   routes: [
     {
       path: '/',

@@ -2,65 +2,63 @@
 <!-- 排行榜页 -->
 
 <template>
-  <div class="ranking" v-bind:style="{background:'url(' + bg + ') no-repeat'}">
+  <div class="ranking">
     <ul class="ranking-list">
       <li class="item" v-for="(ranking, index) in formatRankingList">
         {{ index + 1 + ' ' + '信用卡号后8位 ' + ranking.cardNum + ' 张数 ' + ranking.numMoney }}
       </li>
     </ul>
-    <a class="into-index" href="#/"></a>
+    <router-link class="into-index" to="/"></router-link>
   </div>
 </template>
 
 
 <script>
-  module.exports = {
-    data: function () {
+  export default {
+    data() {
       return {
-          rankingList: [],
-
-        bg: require("../assets/bgRanking.png")
-      }
+        rankingList: []
+      };
     },
 
     //初始化
     mounted: function () {
       this.$nextTick(function () {
-          this.getRankingList();
-      })
+        this.getRankingList();
+      });
     },
 
     computed: {
 
       formatRankingList: function () {
 
-          for (var i = 0; i < this.rankingList.length; i++) {
+        for (var i = 0; i < this.rankingList.length; i++) {
 
-              //对信用卡账号加密
-              this.rankingList[i].cardNum = this.rankingList[i].cardNum.split('').splice(0, 3).join('') + '***' +  this.rankingList[i].cardNum.split('').splice(6, 2).join('');
-          }
+          //对信用卡账号加密
+          this.rankingList[i].cardNum = this.rankingList[i].cardNum.split('').splice(0, 3).join('') + '***' + this.rankingList[i].cardNum.split('').splice(6, 2).join('');
+        }
 
-          return this.rankingList;
+        return this.rankingList;
       }
     },
 
     //回调函数
     methods: {
 
-        getRankingList: function () {
+      getRankingList: function () {
 
-          //使用axios发送get请求
-          this.axios.get(this.getRankingListUrl, {
+        //使用axios发送get请求
+        this.axios.get(this.getRankingListUrl, {
+        })
+          .then(response => {
+            this.rankingList = response.data;
           })
-            .then(response => {
-                this.rankingList = response.data;
-            })
-            .catch(error => {
-              console.log(error);
-            });
-        }
+          .catch(error => {
+            console.log(error);
+          });
+      }
     }
-  }
+  };
 </script>
 
 
@@ -68,6 +66,7 @@
   .ranking {
     width: 100%;
     height: 100%;
+    background: url("../../static/images/bgRanking.png") no-repeat;
 
     /* 使用弹性布局 */
     display: flex;
@@ -97,7 +96,7 @@
     width: 114px;
     height: 50px;
     margin-top: 36px;
-    background: url("../assets/buttonReturn.png") no-repeat;
+    background: url("../../static/images/buttonReturn.png") no-repeat;
     background-size: contain;
     display: inline-block;
   }
