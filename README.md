@@ -6,7 +6,7 @@
 **游戏的视频演示地址：[http://ovfep0kq1.bkt.clouddn.com/zhsq.mp4](http://ovfep0kq1.bkt.clouddn.com/zhsq.mp4)**
 
 ## 用到的技术
-- **前端：** Vue.js vue-router axios ES6 HTML5 CSS3
+- **前端：** vue + vuex + vue-router + axios + ESLint + ES6
 - **构建工具：** Webpack
 - **后台：** PHP
 - **数据库：** MySQL
