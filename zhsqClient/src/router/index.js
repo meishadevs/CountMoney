@@ -1,7 +1,7 @@
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import index from '@/pages/index.vue';
+import home from '@/pages/home.vue';
 import ranking from '@/pages/ranking.vue';
 import rule from '@/pages/rule.vue';
 import merchant from '@/pages/merchant.vue';
@@ -17,8 +17,8 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: index
+      name: 'home',
+      component: home
     },
     {
       path: '/ranking',

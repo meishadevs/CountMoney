@@ -1,7 +1,8 @@
+
 <!-- 首页 -->
 
 <template>
-  <div class="index">
+  <div class="home">
     <div class="container">
 
       <!-- 开始游戏按钮 s -->
@@ -64,14 +65,14 @@
 
 
 <style scoped>
-  .index {
+  .home {
     width: 100%;
     height: 100%;
     background: url("../../static/images/bgIndex.png");
     background-repeat: no-repeat;
   }
 
-  .index .container {
+  .home .container {
 
     /* 使用弹性布局 */
     display: flex;
