@@ -12,7 +12,7 @@
     <div class="notice-content">数钱所得数量乘以幸运盘所得面值等于最终获得现金劵数额。</div>
 
     <!-- 转动转盘按钮 s -->
-    <button class="start-game" @click=" RotatingTurntable()"></button>
+    <button class="start-game" @click=" rotaTurntable()"></button>
     <!-- 转动转盘按钮 e -->
 
   </div>
@@ -173,7 +173,7 @@
       },
 
       //转动转盘
-      RotatingTurntable() {
+      rotaTurntable() {
 
         if (!this.isClick) {
           return;
