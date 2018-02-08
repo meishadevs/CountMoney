@@ -47,8 +47,8 @@
     },
 
     //初始化
-    mounted: function () {
-      this.$nextTick(function () {
+    mounted() {
+      this.$nextTick(() => {
         this.getLinking();
       });
     },
@@ -66,7 +66,7 @@
       ]),
 
       //获得在数钱游戏中的排名
-      getLinking: function () {
+      getLinking() {
 
         //使用axios发送post请求,获得当前在数钱游戏中的排名
         this.axios({
@@ -87,7 +87,7 @@
       },
 
       //计算转盘应该转动多少角度
-      sumRotation: function () {
+      sumRotation() {
 
         //角度索引
         var indexAngle = 0;
@@ -173,7 +173,7 @@
       },
 
       //转动转盘
-      RotatingTurntable: function () {
+      RotatingTurntable() {
 
         if (!this.isClick) {
           return;

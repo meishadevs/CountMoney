@@ -46,7 +46,7 @@
           'setCardNum'
       ]),
 
-      startGame: function () {
+      startGame() {
 
         //获得存储在本地的信用卡账号
         var cardNum = localStorage.getItem('cardNum');
@@ -122,7 +122,6 @@
     height: 25px;
     line-height: 25px;
     margin-top: 16px;
-    font-family: Arial;
     font-size: 20px;
     color: #fff;
     border-bottom: solid 1px #fff;

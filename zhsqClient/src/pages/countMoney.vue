@@ -111,7 +111,7 @@
       ]),
 
       //开始数钱
-      startCountMoney: function () {
+      startCountMoney() {
         this.isShowMask = false;
         this.scrTimer = setInterval(this.scrollBackground, 30);
         this.updateTimer = setInterval(this.updateTime, 1000);
@@ -119,7 +119,7 @@
       },
 
       //循环滚动背景
-      scrollBackground: function() {
+      scrollBackground() {
 
         this.caitiaoTop += this.rollSpeed;
         this.caitiaoBottom += this.rollSpeed;
@@ -145,7 +145,7 @@
       },
 
       //更新时间
-      updateTime: function () {
+      updateTime() {
         this.numTime -= 1;
 
         if (this.numTime === 0) {
@@ -154,7 +154,7 @@
       },
 
       //按下鼠标的时候被调用
-      mouseDown: function (event) {
+      mouseDown(event) {
 
         //不能再数钱
         if (!this.isTouch) {
@@ -166,7 +166,7 @@
       },
 
       //松开鼠标时被调用
-      mouseUp: function (event) {
+      mouseUp(event) {
 
         //不能数钱
         if (!this.isTouch) {
@@ -189,12 +189,12 @@
         this.startY = null;
       },
 
-      moveMoney: function () {
+      moveMoney() {
         this.moneyTop -= 10;
       },
 
       //用于检测
-      update: function () {
+      update() {
 
         if (this.moneyTop <= -282) {
           this.isCanMove = true;
@@ -215,7 +215,7 @@
       },
 
       //进入转转盘
-      intoTurntable: function () {
+      intoTurntable() {
 
         if (this.numMoney <= 0) {
           this.$router.push('/');

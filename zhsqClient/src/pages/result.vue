@@ -32,8 +32,8 @@
     ]),
 
     //初始化
-    mounted: function () {
-      this.$nextTick(function () {
+    mounted() {
+      this.$nextTick(() => {
           this.sendMoneyToServer();
       });
     },
@@ -41,7 +41,7 @@
     //回调函数
     methods: {
 
-        sendMoneyToServer: function () {
+        sendMoneyToServer() {
 
           //使用axios发送post请求
           this.axios({

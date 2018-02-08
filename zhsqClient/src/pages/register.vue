@@ -50,7 +50,7 @@
       ]),
 
       //注册
-      rigisterCardNum: function () {
+      rigisterCardNum() {
 
         if (this.checkCardNum()) {
 
@@ -84,7 +84,7 @@
       },
 
       //检测信用卡账号是否合法
-      checkCardNum: function () {
+      checkCardNum() {
 
         //如果用户输入的信用卡号不足8位
         if (this.cardNum.length < 8) {

@@ -52,8 +52,8 @@
     },
 
     //初始化
-    mounted: function () {
-      this.$nextTick(function () {
+    mounted() {
+      this.$nextTick(() => {
 
         if (this.cardNum === null || this.cardNum === '') {
             return;
@@ -70,7 +70,7 @@
           'cardNum'
       ]),
 
-      filterCard: function () {
+      filterCard() {
 
           //每页第1条优惠券的下标 = 当前展示的优惠券所在页数 * 每页展示的优惠券条数 - 每页展示的优惠券条数
           this.firstIndex = this.curPage * this.limitNum - this.limitNum;
@@ -81,7 +81,7 @@
     //回调函数
     methods: {
 
-      getCardToServer: function () {
+      getCardToServer() {
 
         //使用axios发送get请求
         this.axios.get(this.getCardUrl, {
@@ -106,12 +106,12 @@
       },
 
       //上一页
-      pageUp: function () {
+      pageUp() {
           this.curPage--;
       },
 
       //下一页
-      pageDown: function () {
+      pageDown() {
           this.curPage++;
       }
     }

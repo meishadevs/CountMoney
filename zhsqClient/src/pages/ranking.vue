@@ -22,15 +22,15 @@
     },
 
     //初始化
-    mounted: function () {
-      this.$nextTick(function () {
+    mounted() {
+      this.$nextTick(() => {
         this.getRankingList();
       });
     },
 
     computed: {
 
-      formatRankingList: function () {
+      formatRankingList() {
 
         for (var i = 0; i < this.rankingList.length; i++) {
 
@@ -45,7 +45,7 @@
     //回调函数
     methods: {
 
-      getRankingList: function () {
+      getRankingList() {
 
         //使用axios发送get请求
         this.axios.get(this.getRankingListUrl, {
